@@ -3,6 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Account erstellen</title>
+    <style>
+      body {
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .register-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <?php
@@ -30,14 +48,16 @@
       }
     }
      ?>
-    <h1>Account erstellen</h1>
-    <form action="register.php" method="post">
-      <input type="text" name="username" placeholder="Username" required><br>
-      <input type="password" name="pw" placeholder="Passwort" required><br>
-      <input type="password" name="pw2" placeholder="Passwort wiederholen" required><br>
-      <button type="submit" name="submit">Erstellen</button>
-    </form>
-    <br>
+    <div class="register-container">
+      <h1>Account erstellen</h1>
+      <form action="register.php" method="post" class="register-form">
+        <input type="text" name="username" placeholder="Username" required><br>
+        <input type="password" name="pw" placeholder="Passwort" required><br>
+        <input type="password" name="pw2" placeholder="Passwort wiederholen" required><br>
+        <button type="submit" name="submit">Erstellen</button>
+      </form>
+      <br>
     <a href="index.php">Hast du bereits einen Account?</a>
+  </div>
   </body>
 </html>
