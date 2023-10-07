@@ -11,11 +11,16 @@ $username = $_SESSION["username"];
   <head>
     <meta charset="utf-8">
     <title>Your Personal Site</title>
+    <style>
+      body {
+        background-color: lightblue;
+      }
+    </style>
   </head>
   <body>
     <h1>Hallo <?php echo $username?></h1>
     </br>
-    
+
     </br>
     </br>
     <a href="logout.php">Abmelden</a>
