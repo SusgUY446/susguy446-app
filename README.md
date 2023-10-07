@@ -1,2 +1,2 @@
 # my-cool-site
- cool site
+ this is a school project.
