@@ -10,11 +10,14 @@ $username = $_SESSION["username"];
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Images</title>
+    <title>Your Personal Site</title>
   </head>
   <body>
     <h1>Hallo <?php echo $username?></h1>
-    <img src="https://imgur.com/a/4pAIFP1" alt="Baldur"></br></br></br>
+    </br>
+    
+    </br>
+    </br>
     <a href="logout.php">Abmelden</a>
   </body>
 </html>
