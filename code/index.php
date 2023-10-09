@@ -38,27 +38,27 @@
     <?php
     if(isset($_POST["submit"])){
       require("mysql.php");
-      $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user"); //Username überprüfen
+      $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user"); //Checking username
       $stmt->bindParam(":user", $_POST["username"]);
       $stmt->execute();
       $count = $stmt->rowCount();
       if($count == 1){
-        //Username ist frei
+        //Username is free 
         $row = $stmt->fetch();
         if(password_verify($_POST["pw"], $row["PASSWORD"])){
           session_start();
           $_SESSION["username"] = $row["USERNAME"];
           header("Location: private.php");
         } else {
-          echo "Der Login ist fehlgeschlagen";
+          echo "The Login failed";
         }
       } else {
-        echo "Der Login ist fehlgeschlagen";
+        echo "The Login failed";
       }
     }
     ?>
     <div class="login-container">
-      <h1>Anmelden</h1>
+      <h1>Login</h1>
       <form action="index.php" method="post" class="login-form">
         <div class="input-field">
           <input type="text" name="username" placeholder="Username" class="username-input" required>
