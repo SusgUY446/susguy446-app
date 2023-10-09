@@ -47,10 +47,10 @@
         <div class="input-field">
           <input type="password" name="pw" placeholder="Passwort" class="password-input" required>
         </div>
-        <button type="submit" name="submit" class="button">Einloggen</button>
+        <button type="submit" name="submit" class="button">Login</button>
       </form>
     </br>
-      <a href="register.php" class="button">Noch keinen Account</a>
+      <a href="register.php" class="button">Register</a>
       
     </div>
   </body>
