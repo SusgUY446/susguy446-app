@@ -1,6 +1,5 @@
 # my-cool-site
- this is a school project.
-
+a webapp written in PHP with many features like an Account System and a note app 
 # Suggestions
  dm me on discord.
  susguy446
