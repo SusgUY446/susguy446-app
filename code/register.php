@@ -24,30 +24,37 @@
   </head>
   <body>
     <?php
-    if(isset($_POST["submit"])){
-      require("mysql.php");
-      $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user"); //Username überprüfen
-      $stmt->bindParam(":user", $_POST["username"]);
-      $stmt->execute();
-      $count = $stmt->rowCount();
-      if($count == 0){
-        //Username ist frei
-        if($_POST["pw"] == $_POST["pw2"]){
-          //User anlegen
-          $stmt = $mysql->prepare("INSERT INTO accounts (USERNAME, PASSWORD) VALUES (:user, :pw)");
-          $stmt->bindParam(":user", $_POST["username"]);
-          $hash = password_hash($_POST["pw"], PASSWORD_BCRYPT);
-          $stmt->bindParam(":pw", $hash);
-          $stmt->execute();
-          echo "Dein Account wurde angelegt";
+    session_start(); // Start the session at the beginning
+
+    if (isset($_POST["submit"])) {
+        require("mysql.php");
+        $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user"); // Username überprüfen
+        $stmt->bindParam(":user", $_POST["username"]);
+        $stmt->execute();
+        $count = $stmt->rowCount();
+        if ($count == 0) {
+            // Username ist frei
+            if ($_POST["pw"] == $_POST["pw2"]) {
+                // User anlegen
+                $stmt = $mysql->prepare("INSERT INTO accounts (USERNAME, PASSWORD) VALUES (:user, :pw)");
+                $stmt->bindParam(":user", $_POST["username"]);
+                $hash = password_hash($_POST["pw"], PASSWORD_BCRYPT);
+                $stmt->bindParam(":pw", $hash);
+                $stmt->execute();
+                
+                // Set the session for the newly registered user
+                $_SESSION["username"] = $_POST["username"];
+                
+                echo "Dein Account wurde angelegt";
+                // You can also consider redirecting the user to a welcome page.
+            } else {
+                echo "Die Passwörter stimmen nicht überein";
+            }
         } else {
-          echo "Die Passwörter stimmen nicht überein";
+            echo "Der Username ist bereits vergeben";
         }
-      } else {
-        echo "Der Username ist bereits vergeben";
-      }
     }
-     ?>
+    ?>
     <div class="register-container">
       <h1>Account erstellen</h1>
       <form action="register.php" method="post" class="register-form">
@@ -57,7 +64,8 @@
         <button type="submit" name="submit">Erstellen</button>
       </form>
       <br>
-    <a href="index.php">Hast du bereits einen Account?</a>
-  </div>
+      <a href="index.php">Hast du bereits einen Account?</a>
+    </div>
   </body>
-</html>
+</htm
+  l>
