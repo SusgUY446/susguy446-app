@@ -5,7 +5,7 @@ a webapp written in PHP with many features like an Account System
  susguy446
 
 # whats new
- Added loading animation
+ Added loading animation <br>
  [Tutorial](https://www.youtube.com/watch?v=-HS9IIuT_Mo&list=PLA15AeqIruyGXTvPy4Zmh5lx8Od7CqYtY)
 
 # Installation
