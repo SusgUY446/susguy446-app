@@ -14,6 +14,19 @@ $username = $_SESSION["username"];
     <style>
       body {
         background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        align-self: flex-start;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
       }
 
       .loader {
@@ -26,7 +39,7 @@ $username = $_SESSION["username"];
         align-items: center;
         justify-content: center;
         background: #333333;
-        transition: opacity 0.75s, visibility 0.75s;
+        transition: opacity 2s, visibility 2s;
     }
 
     .loader--hidden {
@@ -41,7 +54,7 @@ $username = $_SESSION["username"];
         border: 15px solid #dddddd;
         border-top-color: blue;
         border-radius: 50%;
-        animation: loading 0.75s ease infinite;
+        animation: loading 2s ease infinite;
     }
 
     @keyframes loading {
@@ -66,12 +79,12 @@ $username = $_SESSION["username"];
     </script>
   </head>
   <body>
+    
     <div class="loader"></div>
-    <h1>Hallo <?php echo $username?></h1>
-    </br>
+    <div class="container">
+      <h1>Hallo <?php echo $username?></h1>
+      <img src="images/baldur.jpg" alt="my dog" width="1000px" height="1000px">
+    </div>
 
-    </br>
-    </br>
-    <a href="logout.php">Abmelden</a>
   </body>
 </html>
