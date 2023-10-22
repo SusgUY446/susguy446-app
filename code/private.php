@@ -77,13 +77,38 @@ $username = $_SESSION["username"];
 
       });
     </script>
+    <script>
+        
+        const imageFiles = [
+            'dog.jpg',
+            'dog2.jpg',
+            'dog3.jpg',
+            
+        ];
+
+        // Function to set a random image from the array
+        function setRandomImage() {
+            const randomIndex = Math.floor(Math.random() * imageFiles.length);
+            const randomImage = imageFiles[randomIndex];
+            const imgElement = document.querySelector('.random-img');
+            imgElement.src = `/personal-site/images/${randomImage}`; // Update the src attribute
+        }
+
+        // Call the function to set a random image when the page loads
+       
+    </script>
+
+
   </head>
   <body>
     
     <div class="loader"></div>
     <div class="container">
       <h1>Hallo <?php echo $username?></h1>
-      <img src="images/baldur.jpg" alt="my dog" width="1000px" height="1000px">
+      <img src="" alt="random image of my dog" width="950px" height="950px" class="random-img">
+      <script>
+        setRandomImage();
+      </script>
     </div>
 
   </body>
