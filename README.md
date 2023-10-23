@@ -1,4 +1,4 @@
-# my-cool-site
+# susguy446.app
 a webapp written in PHP with many features like an Account System
 # Suggestions
  dm me on discord.
