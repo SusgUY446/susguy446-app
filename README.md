@@ -5,6 +5,10 @@ a webapp written in PHP with many features like an Account System
  susguy446
 
 # whats new
+### Update 5
+ Added 
+ - About page
+ - Pricing Page
 ### Update 4
  Added loading animation <br>
  [Tutorial](https://www.youtube.com/watch?v=-HS9IIuT_Mo&list=PLA15AeqIruyGXTvPy4Zmh5lx8Od7CqYtY)
