@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sidebar</title>
+    <link rel="stylesheet" href="cnd/css/loader.css">
+    <link rel="stylesheet" href="cnd/css/container.css">
     <style>
     body {
         background-color: lightblue;
@@ -15,13 +17,7 @@
         margin: 0;
     }
     
-    .container {
-        background-color: white;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-        text-align: center;
-    }
+    
          /* The side navigation menu */
     .sidenav {
         height: 100%; /* 100% Full-height */
@@ -96,9 +92,9 @@
     </div>
       
     
-      <span onclick="openNav()">open</span>
+      <!-- <span onclick="openNav()">open</span> -->
       
-      <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+      
     <div id="main">
         <div class="container">
             <h1>About us</h1>
