@@ -1,4 +1,6 @@
 # Update Log
+ ## Update 6
+ File Structure Update
  ## Update 5
  Added 
  - About page
