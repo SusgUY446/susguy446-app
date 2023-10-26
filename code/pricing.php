@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing</title>
-    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="cnd/css/container.css">
+    <link rel="stylesheet" href="cnd/css/loader.css">
     <style>
     body {
         background-color: lightblue;
@@ -15,14 +16,7 @@
         height: 100vh;
         margin: 0;
     }
-    .container {
-        background-color: white;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-        text-align: center;
-      }
-     /* Style the table */
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -51,8 +45,9 @@ tr:nth-child(even) {
 
 .fa-remove {
   color: red;
-} </style>
-<script type="text/javascript" src="loader.js"></script>
+} 
+</style>
+<script type="text/javascript" src="cnd/js/loader.js"></script>
 </head>
 <body>
     <div class="loader"></div>
