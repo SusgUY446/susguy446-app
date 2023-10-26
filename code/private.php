@@ -9,8 +9,10 @@ $username = $_SESSION["username"];
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- Import Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="cnd/css/loader.css">
+    <link rel="stylesheet" href="cnd/css/container.css">
     <meta charset="utf-8">
     <title>Your Personal Site</title>
 
