@@ -1,0 +1,5 @@
+.username-input::placeholder,
+.password-input::placeholder {
+    border-radius: 8px;
+    text-align: center;
+}
