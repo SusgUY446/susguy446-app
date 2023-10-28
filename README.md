@@ -5,12 +5,12 @@ a webapp written in PHP with many features like an Account System
  susguy446
 
 # whats new
+### Update 7
+ tranlated to English
+ 
 ### Update 6
  file structure update
-### Update 5
- Added 
- - About page
- - Pricing Page
+
 
 
 # Installation
