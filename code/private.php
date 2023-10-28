@@ -131,22 +131,15 @@ $username = $_SESSION["username"];
   <div id="main">
     <div class="container">
       <h1>Hallo <?php echo $username?></h1>
-      <!--<img src="" alt="random image of my dog" width="900px" height="900px" class="random-img">-->
-      <!--
-        <script>
-          setRandomImage();
-        </script>
-    -->
+      <img src="" alt="random image of my dog" width="900px" height="900px" class="random-img">
+      
+      <script>
+        setRandomImage();
+      </script>
+    
     </div>
   </div>
-  <!--Settings-->
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
-    </div>
+
 
     
 

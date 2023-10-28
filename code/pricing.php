@@ -7,15 +7,9 @@
     <title>Pricing</title>
     <link rel="stylesheet" href="cnd/css/container.css">
     <link rel="stylesheet" href="cnd/css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cnd/css/background.css">
     <style>
-    body {
-        background-color: lightblue;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
 
 table {
   border-collapse: collapse;
@@ -53,7 +47,7 @@ tr:nth-child(even) {
     <div class="loader"></div>
     <div class="container">
      <!-- Font Awesome Icon Library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <table>
         <tr>

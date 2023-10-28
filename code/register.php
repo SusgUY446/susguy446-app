@@ -1,71 +1,67 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+  <head>  
     <meta charset="utf-8">
-    <title>Account erstellen</title>
+    <link rel="stylesheet" href="cnd/css/loader.css">
+    <link rel="stylesheet" href="cnd/css/container.css">
+    <link rel="stylesheet" href="cnd/css/background.css">
+    <link rel="stylesheet" href="cnd/css/button.css">
+    <title>Register</title>
     <style>
-      body {
-        background-color: lightblue;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
+      .login-form {
+        margin-top: 10px;
       }
 
-      .register-container {
-        background-color: white;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-        text-align: center;
+      .input-field {
+        margin-bottom: 10px;
       }
     </style>
+
   </head>
   <body>
     <?php
-    session_start(); // Start the session at the beginning
-
-    if (isset($_POST["submit"])) {
-        require("mysql.php");
-        $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user"); // Username überprüfen
-        $stmt->bindParam(":user", $_POST["username"]);
-        $stmt->execute();
-        $count = $stmt->rowCount();
-        if ($count == 0) {
-            // Username ist frei
-            if ($_POST["pw"] == $_POST["pw2"]) {
-                // User anlegen
-                $stmt = $mysql->prepare("INSERT INTO accounts (USERNAME, PASSWORD) VALUES (:user, :pw)");
-                $stmt->bindParam(":user", $_POST["username"]);
-                $hash = password_hash($_POST["pw"], PASSWORD_BCRYPT);
-                $stmt->bindParam(":pw", $hash);
-                $stmt->execute();
-                
-                // Set the session for the newly registered user
-                $_SESSION["username"] = $_POST["username"];
-                
-                echo "Dein Account wurde angelegt";
-                // You can also consider redirecting the user to a welcome page.
-            } else {
-                echo "Die Passwörter stimmen nicht überein";
-            }
+    if(isset($_POST["submit"])){
+      require("mysql.php");
+      $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user"); 
+      $stmt->bindParam(":user", $_POST["username"]);
+      $stmt->execute();
+      $count = $stmt->rowCount();
+      if($count == 0){
+        
+        if($_POST["pw"] == $_POST["pw2"]){
+          
+          $stmt = $mysql->prepare("INSERT INTO accounts (USERNAME, PASSWORD) VALUES (:user, :pw)");
+          $stmt->bindParam(":user", $_POST["username"]);
+          $hash = password_hash($_POST["pw"], PASSWORD_BCRYPT);
+          $stmt->bindParam(":pw", $hash);
+          $stmt->execute();
+          echo "Account created";
         } else {
-            echo "Der Username ist bereits vergeben";
+          echo "The passwords do not match";
         }
+      } else {
+        echo "The username is already in use";
+      }
     }
-    ?>
-    <div class="register-container">
-      <h1>Account erstellen</h1>
+     ?>
+    <div class="container">
+      <h1>Register</h1>
       <form action="register.php" method="post" class="register-form">
+      <div class="input-field">
         <input type="text" name="username" placeholder="Username" required><br>
-        <input type="password" name="pw" placeholder="Passwort" required><br>
-        <input type="password" name="pw2" placeholder="Passwort wiederholen" required><br>
-        <button type="submit" name="submit">Erstellen</button>
+      </div>
+      <div class="input-field">
+        <input type="password" name="pw" placeholder="Password" required><br>
+      </div>
+      <div class="input-field">
+        <input type="password" name="pw2" placeholder="Repeat Password" required><br>
+      </div>
+      <div class="input-field">
+        <button type="submit" name="submit" class="register-button">Create</button>
+      </div>
       </form>
       <br>
-      <a href="index.php">Hast du bereits einen Account?</a>
-    </div>
+    <a href="index.php">Already have a Account?</a>
+  </div>
   </body>
-</htm
-  l>
+</html>
