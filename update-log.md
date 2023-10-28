@@ -1,4 +1,6 @@
 # Update Log
+ ## Update 7
+ Translated to English
  ## Update 6
  File Structure Update
  ## Update 5
