@@ -5,11 +5,11 @@ a webapp written in PHP with many features like an Account System
  susguy446
 
 # whats new
+### Update 8
+ Added a background color changer 
 ### Update 7
  tranlated to English
- 
-### Update 6
- file structure update
+
 
 
 
