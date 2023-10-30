@@ -8,17 +8,7 @@
     <link rel="stylesheet" href="cnd/css/background.css">
     <link rel="stylesheet" href="cnd/css/button.css">
     <link rel="stylesheet" href="cnd/css/login-form.css">
-    <style>
-      .login-form {
-        margin-top: 10px;
-      }
 
-      .input-field {
-        margin-bottom: 10px;
-      }
-
-
-    </style>
     <script src="cnd/js/loader.js"></script>
   </head>
   <body>

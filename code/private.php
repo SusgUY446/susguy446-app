@@ -13,83 +13,13 @@ $username = $_SESSION["username"];
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="cnd/css/loader.css">
     <link rel="stylesheet" href="cnd/css/container.css">
+    <link rel="stylesheet" href="cnd/css/color-changer.css">
+    <link rel="stylesheet" href="cnd/css/background.css">
     <meta charset="utf-8">
     <title>Your Personal Site</title>
 
-    <style>
-      body {
-        background-color: lightblue;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
-      #settings {
 
-      }
-      .container {
-        align-self: flex-start;
-        background-color: white;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-        text-align: center;
-      }
-
-
-    </style>
-    <style>
-      
-.sidenav {
-  height: 100%; 
-  width: 0; 
-  position: fixed; 
-  z-index: 1; 
-  top: 0; 
-  left: 0;
-  background-color: #111; /
-  overflow-x: hidden; 
-  padding-top: 60px; 
-  transition: 0.5s; 
-}
-
-.sidenav a {
-  opacity: 0;
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
-}
-
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-} 
-    </style>
-    <script type="text/javascript" src="loader.js"></script>
+    <script type="text/javascript" src="cnd/js/loader.js"></script>
     <script>
         
         const imageFiles = [
@@ -111,35 +41,70 @@ $username = $_SESSION["username"];
        
     </script>
     <script>
-    
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
-    document.getElementById(".sidenav a").style.opacity = "1";
-  }
+        
 
+        function setColorBlue() {
+            document.body.style.backgroundColor = "blue";
+        }
 
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById(".sidenav a").style.opacity = "0";
-  } 
+        function setColorRed() {
+            document.body.style.backgroundColor = "red";
+        }
+
+        function setColorGreen() {
+            document.body.style.backgroundColor = "green";
+        }
+
+        
     </script>
+
 
   </head>
   <body>
     
   <div class="loader"></div>
-  <div id="main">
-    <div class="container">
+  
+  <div class="container">
       <h1>Hallo <?php echo $username?></h1>
       <img src="" alt="random image of my dog" width="900px" height="900px" class="random-img">
       
-      <script>
-        setRandomImage();
-      </script>
-    
-    </div>
-  </div>
+    <script>
+      setRandomImage();
+    </script>
+    <style>
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
 
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+      }
+
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
+
+    </style>
+    
+
+  </div>
+  <div class="dropdown">
+    <span>Change Color</span>
+    <div class="dropdown-content">
+      <div class="color-changer">
+        <button onclick="setColorGreen()" class="button-green">Green</button>
+        <button onclick="setColorRed()" class="button-red">Red</button>
+        <button onclick="setColorBlue()" class="button-blue">Blue</button>
+      </div>
+    </div>
+    </div>
 
     
 
