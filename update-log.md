@@ -1,4 +1,6 @@
 # Update Log
+ ## Update 8
+ Added a background color changer
  ## Update 7
  Translated to English
  ## Update 6
