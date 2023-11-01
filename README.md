@@ -4,7 +4,7 @@
 
 a webapp written in PHP with many features like an Account System
 
-#Badges
+# Badges <br>
 <img src="https://img.shields.io/github/languages/code-size/SusgUY446/susguy446-app"><br>
 <img src="https://img.shields.io/tokei/lines/github/SusgUY446/susguy446-app"><br>
 # Suggestions
@@ -12,10 +12,11 @@ a webapp written in PHP with many features like an Account System
  susguy446
 
 # whats new
+### update 9
+ added games
 ### Update 8
  Added a background color changer 
-### Update 7
- tranlated to English
+
 
 
 
