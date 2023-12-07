@@ -1,4 +1,10 @@
 # Update Log
+ ## update 10
+ added nav bar 
+ added sidebar 
+ removed random dog image
+ ## Update 9
+ added games
  ## Update 8
  - Added a background color changer
  ## Update 7
