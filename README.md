@@ -12,10 +12,13 @@ a webapp written in PHP with many features like an Account System
  susguy446
 
 # whats new
+### update 10
+ added nav bar
+ added sidebar
+ removed random dog image
 ### update 9
  added games
-### Update 8
- Added a background color changer 
+
 
 
 
