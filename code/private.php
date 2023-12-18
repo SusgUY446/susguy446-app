@@ -85,26 +85,20 @@ $username = $_SESSION["username"];
       <ul>
   
         <li>
-          <a href="">Home</a><br>
+          <a href="index.php">Home</a><br>
+        </li>
+        <li>
+          <a href="settings.php">Settings</a><br>
+        </li>
+        <li>
+          <a href="pricing.php">Pricing</a><br>
         </li>
 
         <li>
-          <a href="">Pricing</a><br>
-        </li>
-
-        <li>
-          <a href="">Settings</a><br>
+          <a href="news.php">News</a><br>
         </li>
       </ul>
     </div>
-
-
-
-    
-
-      
-
-    
 
   </body>
 </html>
