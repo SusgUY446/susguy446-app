@@ -12,12 +12,14 @@ a webapp written in PHP
  susguy446
 
 # whats new
+### Update 11
+ Added Option to delete account
+ Added developer documentation
 ### update 10
  added nav bar<br>
  added sidebar<br>
  removed random dog image<br>
-### update 9
- added games
+
 
 
 
