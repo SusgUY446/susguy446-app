@@ -1,4 +1,6 @@
 # Update Log
+ ## update 11
+ added settings
  ## update 10
  added nav bar 
  added sidebar 
