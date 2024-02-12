@@ -1,9 +1,7 @@
-# susguy446.app
-
-
+# susguy446-app
 
 a webapp written in PHP 
-
+## Might start working on this because i am going into webdev again
 # Badges <br>
 <img src="https://img.shields.io/github/languages/code-size/SusgUY446/susguy446-app"><br>
 <img src="https://img.shields.io/tokei/lines/github/SusgUY446/susguy446-app"><br>
